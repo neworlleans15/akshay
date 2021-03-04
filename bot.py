@@ -103,12 +103,11 @@ async def start(bot, cmd):
 				[
 					[
 						InlineKeyboardButton("Deals Channel", url="https://t.me/TheDealsMaster"),
-						InlineKeyboardButton("Movies Channel", url="https://t.me/StreamersHub"),
-						InlineKeyboardButton("Support Bot", url="https://t.me/Akshayy_Bot")
+						InlineKeyboardButton("Movies Channel", url="https://t.me/StreamersHub")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-						InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+						InlineKeyboardButton("Support Bot", url="https://t.me/Akshayy_Bot")
 					]
 				]
 			)
