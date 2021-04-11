@@ -37,12 +37,12 @@ I work in channel too: Add me to any channel as Admin with Edit Permissions; I w
 
 🧑🏻‍💻 **Founder of** [FoundU](https://t.me/FoundU)
 
-💲 💰 **Keep this bot Alive:** [Donate here](https://t.me/Geeniee_bot)
+💰 **Keep this bot Alive:** [Donate here](https://t.me/Geeniee_bot)
 """
 	HOME_TEXT = """
-Hello [{}](tg://user?id={})\n\nThis is **FoundU's File Bot**.
+Hello [{}](tg://user?id={})\n\n**This is FoundU's File Bot**.
 
-🌲 **Click on 'About Bot' to know more about me**.
+👉 **Click on 'About Bot' to know more about me**.
 
-🌲 **Also Join our chat group** @FoundUchat **to share your thoughts**.
+👉 **Also Join our chat group** @FoundUchat **to share your thoughts**.
 """
