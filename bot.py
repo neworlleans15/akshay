@@ -173,10 +173,10 @@ async def main(bot, message):
 			await forwarded_msg.reply_text(f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!", parse_mode="Markdown", disable_web_page_preview=True)
 			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=FoundU_{file_er_id}"
 			await editable.edit(
-				f"**Your File is Stored in my Database!**\n\nHere is the Permanent Link for your file: {share_link} \n\nJust click on the link to get your file!",
+				f"**Your File is Stored in my Private Database!**\n\n**Here is the Permanent Link for your file**: {share_link} \n\n**Please copy the link for your future reference**!",
 				parse_mode="Markdown",
 				reply_markup=InlineKeyboardMarkup(
-					[[InlineKeyboardButton("Your File Link", url=share_link)], [InlineKeyboardButton("Movie Channel", url="https://t.me/FoundU"), InlineKeyboardButton("Support Group", url="https://t.me/Founduchat")]]
+					[[InlineKeyboardButton("Your File Link", url=share_link)], [InlineKeyboardButton("Movie Channel", url="https://t.me/FoundU"), InlineKeyboardButton("Support Group", url="https://t.me/Founduchat")], [InlineKeyboardButton("Shopping Deals", url="https://t.me/FoundUDeals")]]
 				),
 				disable_web_page_preview=True
 			)
