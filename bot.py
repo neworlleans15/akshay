@@ -65,7 +65,7 @@ async def start(bot, cmd):
 				if user.status == "kicked":
 					await bot.send_message(
 						chat_id=cmd.from_user.id,
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Bot](https://t.me/Akshayy_Bot).",
+						text="Sorry Sir/Mam, you are Banned by Telegram. Contact my [Support Bot](https://t.me/Geeniee_bot).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -77,7 +77,10 @@ async def start(bot, cmd):
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link)
+								InlineKeyboardButton("🤖 Join Channel 1", url="https://t.me/foundudeals)
+							],
+							[
+								InlineKeyboardButton("🤖 Join FoundU's Update Channel", url=invite_link)
 							],
 							[
 								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
@@ -90,7 +93,7 @@ async def start(bot, cmd):
 			except Exception:
 				await bot.send_message(
 					chat_id=cmd.from_user.id,
-					text="Something went Wrong. Contact my [Support Bot](https://t.me/Akshayy_bot).",
+					text="Something went Wrong. Contact me on [Support Bot](https://t.Geeniee_Bot) & send screenshot.",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -102,12 +105,12 @@ async def start(bot, cmd):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Deals Channel", url="https://t.me/TheDealsMaster"),
-						InlineKeyboardButton("Movies Channel", url="https://t.me/StreamersHub")
+						InlineKeyboardButton("Deals & Tricks", url="https://t.me/Foundudeals"),
+						InlineKeyboardButton("Movies & Series", url="https://t.me/FoundU")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-						InlineKeyboardButton("Support Bot", url="https://t.me/Akshayy_Bot")
+						InlineKeyboardButton("Support Bot", url="https://t.me/Geeniee_bot")
 					]
 				]
 			)
@@ -120,7 +123,7 @@ async def start(bot, cmd):
 				if user.status == "kicked":
 					await bot.send_message(
 						chat_id=cmd.from_user.id,
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Bot](https://t.me/Akshayy_Bot).",
+						text="Sorry Sir/Mam, You are Banned by Telegram. Contact me on [Support Bot](https://t.me/Geeniee_bot).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -129,14 +132,17 @@ async def start(bot, cmd):
 				file_id = int(usr_cmd)
 				await bot.send_message(
 					chat_id=cmd.from_user.id,
-					text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="**Please Join all my Channels to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
 					reply_markup=InlineKeyboardMarkup(
 						[
+							[
+								InlineKeyboardButton("🤖 Join Backup Channel", url="https://t.me/Foundudeals")
+							],
 							[
 								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link)
 							],
 							[
-								InlineKeyboardButton("🔄 Refresh / Try Again", url=f"https://telegram.dog/{BOT_USERNAME}?start=StreamersHub_{file_id}")
+								InlineKeyboardButton("🔄 Refresh / Try Again", url=f"https://telegram.dog/{BOT_USERNAME}?start=Foundu_{file_id}")
 							]
 						]
 					),
@@ -146,7 +152,7 @@ async def start(bot, cmd):
 			except Exception:
 				await bot.send_message(
 					chat_id=cmd.from_user.id,
-					text="Something went Wrong. Contact my [Support Bot](https://t.me/Akshayy_Bot).",
+					text="Something went Wrong. Contact my [Support Bot](https://t.me/Geeniee_bot).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -165,12 +171,12 @@ async def main(bot, message):
 			forwarded_msg = await message.forward(DB_CHANNEL)
 			file_er_id = forwarded_msg.message_id
 			await forwarded_msg.reply_text(f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!", parse_mode="Markdown", disable_web_page_preview=True)
-			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=StreamersHub_{file_er_id}"
+			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=FoundU_{file_er_id}"
 			await editable.edit(
-				f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
+				f"**Your File is Stored in my Database!**\n\nHere is the Permanent Link for your file: {share_link} \n\nJust click on the link to get your file!",
 				parse_mode="Markdown",
 				reply_markup=InlineKeyboardMarkup(
-					[[InlineKeyboardButton("Open Link", url=share_link)], [InlineKeyboardButton("Movies Channel", url="https://t.me/StreamersHub"), InlineKeyboardButton("Support Group", url="https://t.me/StreamersChat")]]
+					[[InlineKeyboardButton("Your File Link", url=share_link)], [InlineKeyboardButton("Movie Channel", url="https://t.me/FoundU"), InlineKeyboardButton("Support Group", url="https://t.me/Founduchat")]]
 				),
 				disable_web_page_preview=True
 			)
@@ -192,8 +198,8 @@ async def main(bot, message):
 		try:
 			forwarded_msg = await message.forward(DB_CHANNEL)
 			file_er_id = forwarded_msg.message_id
-			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=StreamersHub_{file_er_id}"
-			CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Get Sharable Stored Link", url=share_link)]]))
+			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=Foundu_{file_er_id}"
+			CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Get Shareable File Link", url=share_link)]]))
 			if message.chat.username:
 				await forwarded_msg.reply_text(f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.message_id}) Channel's Broadcasted File's Button Added!")
 			else:
@@ -313,8 +319,8 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Movies Channel", url="https://t.me/StreamersHub"),
-						InlineKeyboardButton("Deals Channel", url="https://t.me/TheDealsMaster")
+						InlineKeyboardButton("Movies Channel", url="https://t.me/FoundU"),
+						InlineKeyboardButton("Deals Channel", url="https://t.me/FounduDeals")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -330,16 +336,20 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Bot](https://t.me/Akshayy_Bot).",
+						text="Sorry Sir, You are Banned by Telegram. Contact me on my [Support Bot](https://t.me/Geeniee_bot).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="**You Still Didn't Join ☹️, Please Join all my Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
 					reply_markup=InlineKeyboardMarkup(
 						[
+							[
+								InlineKeyboardButton("🤖 Join Backup Channel", url="https://t.me/foundudeals)
+							],
+							
 							[
 								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link)
 							],
@@ -353,7 +363,7 @@ async def button(bot, cmd: CallbackQuery):
 				return
 			except Exception:
 				await cmd.message.edit(
-					text="Something went Wrong. Contact my [Support Bot](https://t.me/Akshayy_Bot).",
+					text="Something went Wrong. Contact me on my [Support Bot](https://t.me/Geeniee_bot) & send screenshot.",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -365,8 +375,8 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Movies Channel", url="https://t.me/StreamersHub"),
-						InlineKeyboardButton("Deals Channel", url="https://t.me/TheDealsMaster")
+						InlineKeyboardButton("Movies Channel", url="https://t.me/FoundU"),
+						InlineKeyboardButton("Deals Channel", url="https://t.me/Foundudeals")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
