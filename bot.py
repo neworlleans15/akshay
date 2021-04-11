@@ -77,10 +77,10 @@ async def start(bot, cmd):
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🤖 Join Channel 1", url="https://t.me/foundudeals)
+								InlineKeyboardButton("🤖 Join Backup Channel", url="https://t.me/foundudeals)
 							],
 							[
-								InlineKeyboardButton("🤖 Join FoundU's Update Channel", url=invite_link)
+								InlineKeyboardButton("🤖 Join Update Channel", url=invite_link)
 							],
 							[
 								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
