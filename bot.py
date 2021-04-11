@@ -105,12 +105,12 @@ async def start(bot, cmd):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Deals & Tricks", url="https://t.me/Foundudeals"),
-						InlineKeyboardButton("Movies & Series", url="https://t.me/FoundU")
+						InlineKeyboardButton("Movies", url="https://t.me/FoundU"),
+						InlineKeyboardButton("Shopping Deals", url="https://t.me/Foundudeals")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-						InlineKeyboardButton("Support Bot", url="https://t.me/Geeniee_bot")
+						InlineKeyboardButton("Talk to admin", url="https://t.me/Geeniee_bot")
 					]
 				]
 			)
@@ -132,7 +132,7 @@ async def start(bot, cmd):
 				file_id = int(usr_cmd)
 				await bot.send_message(
 					chat_id=cmd.from_user.id,
-					text="**Please Join all my Channels to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="**Please Join all my Channels to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use this Bot!",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
@@ -173,10 +173,10 @@ async def main(bot, message):
 			await forwarded_msg.reply_text(f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!", parse_mode="Markdown", disable_web_page_preview=True)
 			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=FoundU_{file_er_id}"
 			await editable.edit(
-				f"**Your File is Stored in my Private Database!**\n\n**Here is the Permanent Link for your file**: {share_link} \n\n**Please copy the link for your future reference**!",
+				f"**Your File is Stored in a Private Database!**\n\n**Here is the Permanent Link for your file**: {share_link} \n\n**Please copy the link for your future reference**!",
 				parse_mode="Markdown",
 				reply_markup=InlineKeyboardMarkup(
-					[[InlineKeyboardButton("Your File Link", url=share_link)], [InlineKeyboardButton("Movie Channel", url="https://t.me/FoundU"), InlineKeyboardButton("Support Group", url="https://t.me/Founduchat")], [InlineKeyboardButton("Shopping Deals", url="https://t.me/FoundUDeals")]]
+					[[InlineKeyboardButton("Your File Link", url=share_link)], [InlineKeyboardButton("Movie Channel", url="https://t.me/FoundU"), InlineKeyboardButton("Chat Group", url="https://t.me/Founduchat")], [InlineKeyboardButton("Shopping Deals", url="https://t.me/FoundUDeals")]]
 				),
 				disable_web_page_preview=True
 			)
@@ -336,7 +336,7 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned by Telegram. Contact me on my [Support Bot](https://t.me/Geeniee_bot).",
+						text="Sorry Sir/Mam, you are Banned by Telegram. Contact me on my [Support Bot](https://t.me/Geeniee_bot).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
