@@ -23,7 +23,7 @@ I work in channel too: Add me to any channel as Admin with Edit Permissions; I w
 
 👥 **Support Bot:** [Chat with Admin](https://t.me/Geeniee_bot)
 
-📢 **Movies & Series Channel:** [FoundU](https://t.me/FoundU)
+📢 **Movies & Series:** [FoundU Channel](https://t.me/FoundU)
 """
 	ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 **Developer:** [Stranger danger](https://t.me/Geeniee_bot)
