@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @User
 
 import os
 
@@ -13,34 +13,32 @@ class Config(object):
 	UPDATES_CHANNEL = int(os.environ.get("UPDATES_CHANNEL"))
 	LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
 	ABOUT_BOT_TEXT = f"""
-This is Permanent Files Store Bot!
-Send me any file I will save it in my Database. Also works for channel. Add me to channel as Admin with Edit Permission, I will add Save Uploaded File in Channel & add Sharable Button Link.
+Send me any file, I (bot) can store it in my database & give you a permanent link.
+I work in channel too: Add me to any channel as Admin with Edit Permissions; I will add Shareable Button Link to every file that you post in that channel.
 
-🤖 **My Name:** [Files Store Bot](https://t.me/{BOT_USERNAME})
+🤖 **My Name:** [FoundU's File Bot](https://t.me/{BOT_USERNAME})
 
-📝 **Language:** [Python3](https://www.python.org)
+# 📝 **Language:** [Python3](https://www.python.org)
 
-📚 **Library:** [Pyrogram](https://docs.pyrogram.org)
+# 📚 **Library:** [Pyrogram](https://docs.pyrogram.org)
 
-📡 **Hosted on:** [Heroku](https://heroku.com)
+# 📡 **Hosted on:** [Heroku](https://heroku.com)
 
-🧑🏻‍💻 **Developer:** @Akshaaaayyy
+🧑🏻‍💻 **Developer:** Stranger Danger
 
-👥 **Support Bot:** [Click Here](https://t.me/Akshayy_Bot)
+👥 **Support Bot:** [Chat with Admin](https://t.me/Geeniee_bot)
 
-📢 **Movies Channel:** [Streamers Hub](https://t.me/StreamersHub)
+📢 **Movies & Series Channel:** [FoundU](https://t.me/FoundU)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** @Akshaaaayyy
+🧑🏻‍💻 **Developer:** [Stranger danger](https://t.me/Geeniee_bot)
 
-Hello. I Will Not Brag About Something Which I Didnt Do. This Bot Was Officially Made By Abir Hasan.
-And A Big Thank You To Him For Making This Bot. You Can Donate To Him By Clicking On The Link Given Below.
-And Again A Big Thank You To The Bot Makers. Cheers
+**Founder of** [FoundU](https://t.me/FoundU]
 
-[Donate Now](https://www.paypal.me/AbirHasan2005) (PayPal)
+**Fund me in keeping this bot alive:** [Ping me here](https://t.me/Geeniee_bot)
 """
 	HOME_TEXT = """
-Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
+Hi [{}](tg://user?id={})\n\nThis is **FoundU's File Bot**.
 
-Send me any file I will give you a permanent Sharable Link. Check **About Bot** Button.
+**Join** @FoundU & @FoundUdeals **to use this bot**.
 """
